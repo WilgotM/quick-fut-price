@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="sv" data-static-root="./" data-api-root="">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#000000">
+<meta name="description" content="Sök FC27-spelare och se deras priser direkt.">
+<title>quick-fut-price · FC27 spelarpriser</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css?v=4"><script src="./app.js?v=4" defer></script>
+</head>
+<body>
+<main aria-label="FC27 spelarpriser">
+<div class="controls">
+<div class="searchbox">
+<svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+<label class="sr-only" for="search">Sök spelare</label><input id="search" type="search" placeholder="Sök spelare" autocomplete="off" spellcheck="false" maxlength="80" aria-controls="results">
+<button id="clear" aria-label="Rensa sökning" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"/></svg></button>
+<button id="voice" aria-label="Starta röstsökning" aria-pressed="false" title="Röstsökning (Alt+V). Ljud behandlas av webbläsarens taltjänst."><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M6 11v1a6 6 0 0 0 12 0v-1M12 18v3m-3 0h6"/></svg></button>
+</div>
+<div class="tabs" role="group" aria-label="Marknad"><span class="selection" aria-hidden="true"></span><button class="active" data-platform="PS" aria-pressed="true" title="PlayStation och Xbox">Konsol</button><button data-platform="PC" aria-pressed="false">PC</button></div>
+</div>
+<div id="voice-status" role="status" hidden></div>
+<span id="hint" class="sr-only" role="status"></span>
+<span id="results-title" class="sr-only"></span><span id="result-count" class="sr-only" aria-live="polite"></span>
+<div id="results" aria-busy="false"></div>
+<div id="empty"><button id="voice-tip-button" aria-label="Starta röstsökning"><kbd id="alt-key">alt</kbd><kbd>V</kbd><span>för att prata</span></button></div>
+<div id="message" role="status" hidden></div><button id="retry" hidden>Försök igen</button>
+</main>
+<dialog id="help-dialog" aria-labelledby="help-title"><button id="close-help" aria-label="Stäng">×</button><h2 id="help-title">Kortkommandon</h2><dl><dt><kbd>/</kbd></dt><dd>Sök</dd><dt><kbd>Alt + V</kbd></dt><dd>Starta / stoppa mikrofonen</dd><dt><kbd>Esc</kbd></dt><dd>Avbryt / rensa</dd></dl><label for="voice-language">Röstspråk</label><select id="voice-language"><option value="sv-SE">Svenska</option><option value="en-GB">English</option></select><p>Genvägar fungerar när sidan är aktiv. Rösten behandlas av webbläsarens taltjänst.</p></dialog>
+</body></html>
